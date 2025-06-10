@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3'   // Use the same name as defined in Jenkins
+    }
+
     stages {
         stage('Clone') {
             steps {
