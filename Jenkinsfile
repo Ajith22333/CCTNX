@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/CCTNX.git'
+                git 'https://github.com/Ajith22333/CCTNX.git'
             }
         }
         stage('Build') {
