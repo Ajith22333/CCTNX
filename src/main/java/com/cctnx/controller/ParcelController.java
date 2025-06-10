@@ -9,11 +9,13 @@ import java.util.*;
 @RequestMapping("/api/parcels")
 public class ParcelController {
 
+    // Use String as key, convert Long id to String when storing
     private final Map<String, Parcel> parcelStore = new HashMap<>();
 
     @PostMapping
     public Parcel addParcel(@RequestBody Parcel parcel) {
-        parcelStore.put(parcel.getId(), parcel);
+        // Convert Long ID to String
+        parcelStore.put(String.valueOf(parcel.getId()), parcel);
         return parcel;
     }
 
